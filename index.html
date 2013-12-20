@@ -11,17 +11,47 @@
       padding:0px;
     }
     
+    body {
+      background-color: #000;
+    }
+
     #octocat {
       display: block;
       width:384px;
-      margin: 50px auto;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-name: slidein;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
     }
     
+    @-webkit-keyframes slidein {
+      from {
+        margin-left: 10%;
+      }
+      to {
+        margin-left: 50%;
+      }
+    }
+   
+    @-webkit-keyframes rockout {
+      from {
+	-webkit-transform: rotate(-90deg);
+      }
+      to {
+	-webkit-transform: rotate(90deg);
+      }
+    }
+
     p {
+      color: #f00;
       display: block;
       width: 400px;
       margin: 50px auto;
       font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+      -webkit-animation-duration: 3s;
+      -webkit-animation-name: rockout;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
     }
     #rainbow-message {
       position: absolute;
